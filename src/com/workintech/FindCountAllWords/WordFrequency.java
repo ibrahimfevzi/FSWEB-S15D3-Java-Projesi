@@ -1,5 +1,7 @@
 package com.workintech.FindCountAllWords;
 
+import com.sun.source.tree.Tree;
+
 import java.util.*;
 
 public class WordFrequency {
@@ -18,7 +20,7 @@ public class WordFrequency {
 
         String[] words = text.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
 
-        HashMap<String, Integer> wordFrequency = new HashMap<>();
+        TreeMap<String, Integer> wordFrequency = new TreeMap<>();
 
         for (String word : words) {
             wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
